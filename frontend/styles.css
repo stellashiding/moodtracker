@@ -1,28 +1,26 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
     padding: 20px;
 }
 
-h1 {
-    color: #333;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-textarea {
-    width: 80%;
-    height: 100px;
-    margin-top: 20px;
+textarea, input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
     padding: 10px;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 button {
-    margin-top: 10px;
     padding: 10px 20px;
     background-color: #4caf50;
     color: white;
@@ -37,18 +35,18 @@ button:hover {
 }
 
 #output {
-    width: 80%;
     margin-top: 20px;
 }
 
 #moodDisplay {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin: 20px 0;
 }
 
 #personalizedMessage {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    line-height: 1.5;
 }
 
 #musicRecommendations h2 {
@@ -56,24 +54,29 @@ button:hover {
     color: #555;
 }
 
-ul {
+#musicList {
     list-style-type: none;
     padding: 0;
 }
 
-li {
-    margin-bottom: 10px;
-}
-
-a {
+.playlist-link {
     color: #1db954;
     text-decoration: none;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
 }
 
-a:hover {
+.playlist-link:hover {
     text-decoration: underline;
 }
 
-#visualization {
+#supportResponse h3 {
     margin-top: 20px;
+    color: #555;
+}
+
+#copingStrategies {
+    list-style-type: disc;
+    margin-left: 20px;
 }

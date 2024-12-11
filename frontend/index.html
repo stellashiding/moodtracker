@@ -7,24 +7,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Mood Tracker for Mental Health</h1>
-    <textarea id="userInput" placeholder="How was your day?"></textarea>
-    <button onclick="submitReflection()">Reflect</button>
-    
-    <div id="output">
-        <div id="moodDisplay"></div>
-        <div id="personalizedMessage"></div>
-        <div id="musicRecommendations">
-            <h2>Recommended Music Playlists:</h2>
-            <ul id="musicList"></ul>
+    <div class="container">
+        <h1>Mood Tracker for Mental Health</h1>
+        <button id="composeButton">Compose</button>
+        
+        <div id="composeForm" style="display:none;">
+            <input type="text" id="titleInput" placeholder="Title" />
+            <input type="text" id="locationInput" placeholder="Location" />
+            <input type="text" id="weatherInput" placeholder="Weather" />
+            <textarea id="journalInput" placeholder="Write your journal entry here..."></textarea>
+            <button onclick="submitJournal()">Submit Journal</button>
+        </div>
+
+        <div id="journalDisplay" style="display:none;">
+            <h2>Your Journal Entry</h2>
+            <p><strong>Title:</strong> <span id="displayTitle"></span></p>
+            <p><strong>Location:</strong> <span id="displayLocation"></span></p>
+            <p><strong>Weather:</strong> <span id="displayWeather"></span></p>
+            <h3>Entry:</h3>
+            <p id="displayJournalText"></p>
+        </div>
+
+        <div id="output" style="display:none;">
+            <div id="visualization"></div>
+            <div id="moodDisplay"></div>
+            <div id="personalizedMessage"></div>
+            <div id="supportResponse">
+                <h3>Supportive Response</h3>
+                <div id="validationMessage"></div>
+                <ul id="copingStrategies"></ul>
+            </div>
+            <div id="musicRecommendations">
+                <h2>Recommended Music Playlists:</h2>
+                <ul id="musicList"></ul>
+            </div>
         </div>
     </div>
     
-    <div id="visualization"></div>
-    
-    <!-- Include P5.js and ML5.js -->
+    <!-- Include P5.js -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ml5@latest/dist/ml5.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
