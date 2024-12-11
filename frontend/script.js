@@ -1,4 +1,4 @@
-// P5.js sketch class (unchanged, except we might add new moods if needed)
+
 class MoodSketch {
     constructor(p) {
         this.p = p;

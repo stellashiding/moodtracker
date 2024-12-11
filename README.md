@@ -82,8 +82,7 @@ project_root/
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/mood-tracker.git
-cd mood-tracker
+git clone git@github.com:stellashiding/moodtracker.git
 ```
 
 #### 2. Navigate to the Backend Directory
